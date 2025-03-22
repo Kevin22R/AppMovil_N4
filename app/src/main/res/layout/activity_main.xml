@@ -9,15 +9,14 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/Resultado"
+    <EditText        android:id="@+id/Resultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="none"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:gravity="end"
         android:padding="16dp"
-        android:textColor="@color/white"
+        android:textColor="@color/resultColor"
         android:hint="0"
         android:background="@drawable/borde_resultado"/>
 

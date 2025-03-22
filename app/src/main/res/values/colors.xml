@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="verdeClaro">#DBF4B1</color>
     <color name="verdeOscuro">#203803</color>
-    <color name="nose">"#212121"</color>
+    <color name="resultColor">#000000</color>
+    <color name="errorColor">#FF0000</color>
+
 </resources>

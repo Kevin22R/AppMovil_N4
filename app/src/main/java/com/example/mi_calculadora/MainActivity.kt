@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var etResultado: EditText
@@ -53,10 +54,17 @@ class MainActivity : AppCompatActivity() {
                 "+" -> primerNumero + segundoNumero
                 "-" -> primerNumero - segundoNumero
                 "*" -> primerNumero * segundoNumero
-                "/" -> if (segundoNumero != 0.0) primerNumero / segundoNumero else "Error"
-                else -> ""
+                "/" -> if (segundoNumero != 0.0) primerNumero / segundoNumero else Double.NaN
+                else -> Double.NaN
             }
-            etResultado.setText(resultado.toString())
+
+            if (resultado.isNaN()) {
+                etResultado.setText("Error")
+                etResultado.setTextColor(resources.getColor(R.color.errorColor, theme))
+            } else {
+                etResultado.setText(resultado.toString())
+                etResultado.setTextColor(resources.getColor(R.color.resultColor, theme))
+            }
         }
     }
 
